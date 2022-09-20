@@ -1,0 +1,37 @@
+.footer {
+    @include padding;
+    background-color: $footer-bg-color;
+
+    &__logo {
+        color: white;
+        font-size: 1rem;
+        font-family: 'Shrikhand', cursive;
+        margin-bottom: 1.5rem;
+
+        @include tablet {
+            @include flex;
+        }
+    }
+
+    .footer__links {
+        @include flex (column,flex-start,flex-start); 
+        gap: 0.8rem;
+
+        @include tablet {
+            @include flex;
+            gap: 2.5rem;
+        }
+
+        .footer__link {
+            @include flex (row,flex-start,flex-start);
+            color: white;
+            .footer__category {
+                font-weight: 400;
+            }
+            .footer__icon {
+                width: 1.8rem;
+                color: white;
+            }
+        }
+    } 
+}

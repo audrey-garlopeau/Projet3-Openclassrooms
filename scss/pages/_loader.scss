@@ -1,0 +1,23 @@
+.loader {
+    @include flex (row, center, center);
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 10;
+    background-color: #f2f2f2;
+    padding: 1.2rem;
+    animation: fadeOut 3000ms;
+    animation-fill-mode: forwards;
+
+    :nth-child(1) {
+        @include dots ($primary-color,2s ease-in-out 0s infinite dots)
+    }
+
+    :nth-child(2) {
+        @include dots ($secondary-color,2s ease-in-out 0.4s infinite dots);
+    }
+
+    :nth-child(3) {
+        @include dots ($tertiary-color,2s ease-in-out 0.8s infinite dots);
+    }
+}

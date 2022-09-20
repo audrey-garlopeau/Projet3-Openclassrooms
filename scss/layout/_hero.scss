@@ -1,0 +1,16 @@
+.hero {
+    @include flex (column, center,center);
+    padding: 2.5rem 1.5rem;
+    gap: 1rem;
+    text-align: center;
+    background-color: $bg-color-light;
+
+    &__title {
+        margin: 0 2rem;
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        color: #353535;
+    }
+}

@@ -1,0 +1,28 @@
+// MAIN HEADER
+.header {
+    @include flex;
+    padding: 1rem 1.5rem;
+    @include header-shadow;
+    position: relative;
+    z-index: 1;
+}
+
+// PAGES HEADER
+.menu__header {
+    @include flex;
+    padding: 1rem 1.5rem;
+    @include header-shadow;
+    position: relative;
+    z-index: 1;
+
+
+    .menu__icon {
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+        color: #515151;
+        font-size: 1.2rem;
+    }
+
+
+}

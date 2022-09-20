@@ -1,0 +1,86 @@
+.howItWorks {
+    @include padding;
+    background-color: white;
+    counter-reset: number;
+
+    @include laptop {
+        @include laptop-padding;
+    }
+
+
+
+    &__title {
+        margin-bottom: 1.5rem;
+    }
+
+    &__steps {
+        @include flex (column, center, flex-start);
+        gap: 1rem;
+
+        @include tablet {
+            @include flex (row)
+        }
+
+        @include laptop {
+            @include flex (row, space-between,center);
+            gap: 1.5rem;
+        }
+
+        .howItWorks__step {
+            @include flex (row, flex-start,center);
+            @include component-shadow;
+            background-color: $bg-color-light;
+            width: 19.5rem;
+            height: 4.5rem;
+            border-radius: 1rem;
+            margin-left:0.75rem;
+
+            @include laptop {
+                width: 100%;
+            }
+
+            &::before {
+            @include flex (row, center, center);
+            content: counter(number);
+            counter-increment: number;
+            background-color: $primary-color;
+            color: white;
+            border-radius: 3rem;
+            min-width: 1.5rem;
+            min-height: 1.5rem;
+            position: relative;
+            left:-0.8rem;
+            }
+
+            &:hover {
+                background-color: #F5EDFF;
+                transition: backgroun-color 0.2s linear;
+
+                .howItWorks__icon {
+                    color: $primary-color;
+                    transition: color 0.2s linear;
+                }
+            }
+
+            .howItWorks__container {
+                @include flex (row, flex-start, baseline);
+                margin: 0 1rem;
+                gap: 1rem;
+
+                @include tablet {
+                    @include flex(row, center, center);
+                    margin: 0rem;
+                    gap: 1.5rem;
+                }
+
+                .howItWorks__icon {
+                    font-size: 1.2rem;
+                }
+
+                .howItWorks__text {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
