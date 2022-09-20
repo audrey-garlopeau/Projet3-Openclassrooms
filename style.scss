@@ -1,5 +1,5 @@
-@import './scss/utils/variables', './scss/utils/mixins', './scss/utils/keyframes', './scss/utils/maps';
+@import './scss/utils/_variables', './scss/utils/mixins', './scss/utils/keyframes', './scss/utils/maps';
 @import './scss/base/reset', './scss/base/typography';
 @import './scss/layout/header', './scss/layout/_hero', './scss/layout/_how-it-works', './scss/layout/_restaurants-cards', './scss/layout/footer';
 @import './scss/components/_location', './scss/components/_button', './scss/components/_heart';
-@import './scss/pages/_loader', './scss/pages/menu-image';
+@import './scss/pages/_loader', './scss/pages/_menu-image';

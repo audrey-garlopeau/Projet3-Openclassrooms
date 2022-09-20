@@ -10,7 +10,11 @@
 // PAGES HEADER 
 
 .menu__header {
-    @include border;
+    @include flex;
+    padding: 1rem 1.5rem;
+    @include header-shadow;
+    position: relative;
+    z-index: 1;
 
     .menu__icon {
         position: absolute;
