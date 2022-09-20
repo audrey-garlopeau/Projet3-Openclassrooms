@@ -7,14 +7,10 @@
     z-index: 1;
 }
 
-// PAGES HEADER
-.menu__header {
-    @include flex;
-    padding: 1rem 1.5rem;
-    @include header-shadow;
-    position: relative;
-    z-index: 1;
+// PAGES HEADER 
 
+.menu__header {
+    @include border;
 
     .menu__icon {
         position: absolute;
@@ -23,6 +19,4 @@
         color: #515151;
         font-size: 1.2rem;
     }
-
-
 }
