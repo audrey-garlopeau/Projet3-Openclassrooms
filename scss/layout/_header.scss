@@ -1,22 +1,12 @@
-// MAIN HEADER
+// HEADER
 .header {
     @include flex;
     padding: 1rem 1.5rem;
     @include header-shadow;
     position: relative;
     z-index: 1;
-}
 
-// PAGES HEADER 
-
-.menu__header {
-    @include flex;
-    padding: 1rem 1.5rem;
-    @include header-shadow;
-    position: relative;
-    z-index: 1;
-
-    .menu__icon {
+    .header__arrow--link {
         position: absolute;
         top: 1.5rem;
         left: 1.5rem;

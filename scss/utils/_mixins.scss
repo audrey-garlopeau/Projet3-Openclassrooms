@@ -13,8 +13,8 @@
     box-shadow: 4px 4px 10px rgb(0 0 0 / 25%);
 }
 
-@mixin padding {
-    padding: 2.5rem 1.5rem;
+@mixin padding ($padding: 2.5rem 1.5rem) {
+    padding: $padding;
 }
 
 @mixin laptop-padding {
@@ -75,6 +75,43 @@
     animation: $animation;
 }
 
+
+// MIXIN RESTAURANT CARDS AND ROTATION ANIMATION
+@mixin card {
+    background-color: white;
+    @include component-shadow;
+    display: flex;
+    flex-direction: row;
+    border-radius: 0.9rem;
+    overflow: hidden;
+    max-height: 4.3rem;
+
+    @include laptop {
+        max-width: 18rem;
+    }
+
+    @include desktop {
+        max-width: 50rem;
+    }
+
+    &:hover {
+        .submenu__animation {
+            margin-right: 0rem;
+
+            .submenu__check {
+                animation: checkrotation 1s;
+            }
+        }
+    }
+
+}
+
+// MIXIN CROP TEXT DOTS
+@mixin ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 
 
 

@@ -1,3 +1,24 @@
+@keyframes checkrotation {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes SlideUp-FadeIn {
+  0% {
+    opacity: 0%;
+    transform: translateY(250px);
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 100%;
+  }
+}
 @keyframes fadeOut {
   0% {
     opacity: 100%;
@@ -63,18 +84,7 @@ body {
   position: relative;
   z-index: 1;
 }
-
-.menu__header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.25);
-  position: relative;
-  z-index: 1;
-}
-.menu__header .menu__icon {
+.header .header__arrow--link {
   position: absolute;
   top: 1.5rem;
   left: 1.5rem;
@@ -144,10 +154,15 @@ body {
   align-items: center;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   background-color: #F6F6F6;
-  width: 19.5rem;
+  width: 95%;
   height: 4.5rem;
   border-radius: 1rem;
   margin-left: 0.75rem;
+}
+@media screen and (min-width: 768px) {
+  .howItWorks__steps .howItWorks__step {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 992px) {
   .howItWorks__steps .howItWorks__step {
@@ -272,6 +287,230 @@ body {
   flex: 2;
 }
 
+@keyframes checkrotation {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes SlideUp-FadeIn {
+  0% {
+    opacity: 0%;
+    transform: translateY(250px);
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 100%;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+@keyframes dots {
+  50% {
+    opacity: 0;
+    transform: scale(0.7) translateY(10px);
+  }
+}
+.menu {
+  padding: 0 20px;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #F6F6F6;
+  position: relative;
+  margin-top: -3rem;
+  z-index: 1;
+}
+@media screen and (min-width: 992px) {
+  .menu {
+    padding: 0 40px;
+  }
+}
+.menu__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+@media screen and (min-width: 992px) {
+  .menu__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2.5rem;
+    gap: 4rem;
+  }
+}
+.menu__header .menu__title {
+  font-family: "Shrikhand", cursive;
+}
+.menu__header .menu__heart {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  padding-left: 0;
+}
+.menu__header .menu__heart :nth-child(1) {
+  position: absolute;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.menu__header .menu__heart :nth-child(2) {
+  position: absolute;
+  font-size: 1.3rem;
+  color: transparent;
+  background-image: linear-gradient(357deg, #9356CD 0%, #FF79DA 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+}
+.menu__header .menu__heart :nth-child(2):hover {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (min-width: 992px) {
+  .menu .menu__all {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+.menu .menu__all .submenu__detail {
+  padding-top: 1.25rem;
+}
+.menu .menu__all .submenu__detail .submenu__title {
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 400;
+}
+.menu .menu__all .submenu__detail .submenu__title::after {
+  content: "";
+  position: absolute;
+  height: 0.2rem;
+  width: 15%;
+  background-color: #99E2D0;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+}
+.menu .menu__all .submenu__detail .submenu__cards {
+  display: flex;
+  flex-direction: column;
+  padding: 3.1rem 0;
+  gap: 1rem;
+}
+.menu .menu__all .submenu__detail .submenu__cards :nth-child(1) {
+  animation-delay: 0s;
+}
+.menu .menu__all .submenu__detail .submenu__cards :nth-child(2) {
+  animation-delay: 0.2s;
+}
+.menu .menu__all .submenu__detail .submenu__cards :nth-child(3) {
+  animation-delay: 0.4s;
+}
+.menu .menu__all .submenu__detail .submenu__cards .submenu__card {
+  background-color: white;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  max-height: 4.3rem;
+  animation-name: SlideUp-FadeIn;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s;
+  animation-play-state: running;
+  opacity: 0;
+}
+@media screen and (min-width: 992px) {
+  .menu .menu__all .submenu__detail .submenu__cards .submenu__card {
+    max-width: 18rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .menu .menu__all .submenu__detail .submenu__cards .submenu__card {
+    max-width: 50rem;
+  }
+}
+.menu .menu__all .submenu__detail .submenu__cards .submenu__card:hover .submenu__animation {
+  margin-right: 0rem;
+}
+.menu .menu__all .submenu__detail .submenu__cards .submenu__card:hover .submenu__animation .submenu__check {
+  animation: checkrotation 1s;
+}
+.menu .menu__all .submenu__detail .submenu__cards .submenu__card .submenu__items {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.menu .menu__all .submenu__detail .submenu__cards .submenu__card .submenu__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  padding: 15px 10px;
+  overflow: hidden;
+  display: block;
+}
+.menu .menu__all .submenu__detail .submenu__cards .submenu__card .submenu__text h4 {
+  font-weight: bold;
+  font-size: 1.1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu .menu__all .submenu__detail .submenu__cards .submenu__card .submenu__text p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 0.9rem;
+}
+.menu .menu__all .submenu__detail .submenu__cards .submenu__card .submenu__animation {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: -3.5rem;
+  transition: margin-right 0.5s ease-in-out;
+}
+.menu .menu__all .submenu__detail .submenu__cards .submenu__card .submenu__animation .submenu__price {
+  display: flex;
+  align-items: flex-end;
+  font-weight: 600;
+  color: #353535;
+  padding: 15px 10px;
+}
+.menu .menu__all .submenu__detail .submenu__cards .submenu__card .submenu__animation .submenu__check--bg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 3.5rem;
+}
+.menu .menu__all .submenu__detail .submenu__cards .submenu__card .submenu__animation .submenu__check--bg .submenu__check {
+  font-size: 1.2rem;
+  color: white;
+}
+
 .footer {
   padding: 2.5rem 1.5rem;
   background-color: #353535;
@@ -359,6 +598,27 @@ body {
   cursor: pointer;
 }
 
+.menu__btn {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 10rem;
+  padding: 0 20px 50px 20px;
+}
+.menu__btn .order {
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  border-radius: 3rem;
+  color: white;
+  background-image: linear-gradient(357deg, #9356CD 0%, #FF79DA 100%);
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
 .restaurant__like {
   display: flex;
   flex-direction: row;
@@ -426,6 +686,19 @@ body {
   display: inline-block;
   background-color: #99E2D0;
   animation: 2s ease-in-out 0.8s infinite dots;
+}
+
+.menu__img--bg {
+  max-width: 100%;
+  display: block;
+}
+@media screen and (min-width: 992px) {
+  .menu__img--bg {
+    object-fit: cover;
+    object-position: 50% 70%;
+    width: 100%;
+    max-height: 35rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

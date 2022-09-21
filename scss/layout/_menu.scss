@@ -1,0 +1,151 @@
+@use '../utils/keyframes';
+
+.menu {
+    padding: 0 20px;
+    border-radius: 2rem 2rem 0 0;
+    background-color: #F6F6F6;
+    position: relative;
+    margin-top: -3rem;
+    z-index: 1;
+
+    @include laptop {
+        padding: 0 40px;
+    }
+
+    &__header {
+        @include flex(row, space-between, center);
+        @include padding (1.5rem 0);
+
+
+        @include laptop {
+            @include flex(row, center, center);
+            padding-top: 2.5rem;
+            gap: 4rem;
+        }
+
+
+        .menu__title {
+            font-family: 'Shrikhand', cursive;
+        }
+
+        .menu__heart {
+            @include heart;
+        }
+    }
+
+    .menu__all {
+        @include laptop {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .submenu__detail {
+            padding-top: 1.25rem;
+
+            .submenu__title {
+                text-transform: uppercase;
+                position: relative;
+                font-weight: 400;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 0.2rem;
+                    width: 15%;
+                    background-color: $tertiary-color;
+                    bottom: -15px;
+                    left: 0;
+                    right: 0;
+                }
+            }
+
+            .submenu__cards {
+                display: flex;
+                flex-direction: column;
+                @include padding (3.1rem 0);
+                gap: 1rem;
+
+                :nth-child(1) {
+                    animation-delay: calc(0s/5);
+                }
+
+                :nth-child(2) {
+                    animation-delay: calc(1s/5);
+                }
+
+                :nth-child(3) {
+                    animation-delay: calc(2s/5);
+                }
+
+                .submenu__card {
+                    @include card;
+                    animation-name: SlideUp-FadeIn;
+                    animation-timing-function: ease;
+                    animation-fill-mode: forwards;
+                    animation-duration: 1.5s;
+                    animation-play-state: running;
+                    opacity: 0;
+
+                    .submenu__items {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                    }
+
+                    .submenu__text {
+                        @include flex(column, center, flex-start);
+                        height: 100%;
+                        width: 100%;
+                        padding: 15px 10px;
+                        overflow: hidden;
+                        display: block;
+
+
+                        h4 {
+                            font-weight: bold;
+                            font-size: 1.1rem;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                        }
+
+                        p {
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            font-size: 0.9rem;
+                        }
+                    }
+
+                    .submenu__animation {
+                        display: flex;
+                        flex-direction: row;
+                        margin-left: auto;
+                        margin-right: -3.5rem;
+                        transition: margin-right 0.5s ease-in-out;
+
+                        .submenu__price {
+                            display: flex;
+                            align-items: flex-end;
+                            font-weight: 600;
+                            color: #353535;
+                            padding: 15px 10px;
+                        }
+
+                        .submenu__check--bg {
+                            @include flex;
+                            background-color: $tertiary-color;
+                            width: 3.5rem;
+
+                            .submenu__check {
+                                font-size: 1.2rem;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

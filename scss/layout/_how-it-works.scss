@@ -22,34 +22,38 @@
         }
 
         @include laptop {
-            @include flex (row, space-between,center);
+            @include flex (row, space-between, center);
             gap: 1.5rem;
         }
 
         .howItWorks__step {
-            @include flex (row, flex-start,center);
+            @include flex (row, flex-start, center);
             @include component-shadow;
             background-color: $bg-color-light;
-            width: 19.5rem;
+            width: 95%;
             height: 4.5rem;
             border-radius: 1rem;
-            margin-left:0.75rem;
+            margin-left: 0.75rem;
+
+            @include tablet {
+                width: 100%;
+            }
 
             @include laptop {
                 width: 100%;
             }
 
             &::before {
-            @include flex (row, center, center);
-            content: counter(number);
-            counter-increment: number;
-            background-color: $primary-color;
-            color: white;
-            border-radius: 3rem;
-            min-width: 1.5rem;
-            min-height: 1.5rem;
-            position: relative;
-            left:-0.8rem;
+                @include flex (row, center, center);
+                content: counter(number);
+                counter-increment: number;
+                background-color: $primary-color;
+                color: white;
+                border-radius: 3rem;
+                min-width: 1.5rem;
+                min-height: 1.5rem;
+                position: relative;
+                left: -0.8rem;
             }
 
             &:hover {
