@@ -66,6 +66,10 @@
             animation-delay: calc(2s/5);
         }
 
+        .delay-3 {
+            animation-delay: calc(3s/5);
+        }
+
         .menu__card {
             background-color: white;
             border-radius: 1rem;
@@ -86,7 +90,7 @@
                     transform: translateX(0%);
 
                     .checkbox__icon {
-                        animation: icon-rotation 1s;
+                        animation: rotate 1s;
                     }
                 }
             }
@@ -137,6 +141,7 @@
                     .checkbox__icon {
                         font-size: 1.5rem;
                         color: white;
+
                     }
                 }
             }

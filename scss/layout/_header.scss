@@ -10,12 +10,4 @@
         left: 1.25rem;
         font-size: 1.2rem;
     }
-
-    @include laptop {
-        padding: 1.25, 2.5rem;
-
-        .header__icon {
-            left: 2.5rem;
-        }
-    }
 }

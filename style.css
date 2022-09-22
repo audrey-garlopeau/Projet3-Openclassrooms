@@ -1,4 +1,4 @@
-@keyframes checkrotation {
+@keyframes rotate {
   0% {
     transform: rotate(-270deg);
   }
@@ -90,14 +90,6 @@ body {
   top: 1.8rem;
   left: 1.25rem;
   font-size: 1.2rem;
-}
-@media screen and (min-width: 992px) {
-  .header {
-    padding: 1.25, 2.5rem;
-  }
-  .header .header__icon {
-    left: 2.5rem;
-  }
 }
 
 .hero {
@@ -371,6 +363,9 @@ body {
 .menu__main .menu__category .delay-2 {
   animation-delay: 0.4s;
 }
+.menu__main .menu__category .delay-3 {
+  animation-delay: 0.6s;
+}
 .menu__main .menu__category .menu__card {
   background-color: white;
   border-radius: 1rem;
@@ -392,7 +387,7 @@ body {
   transform: translateX(0%);
 }
 .menu__main .menu__category .menu__card:hover .menu__item--right .checkbox__icon {
-  animation: icon-rotation 1s;
+  animation: rotate 1s;
 }
 .menu__main .menu__category .menu__card .menu__item--left {
   padding: 0.8rem;
