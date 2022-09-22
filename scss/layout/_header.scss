@@ -1,16 +1,21 @@
-// HEADER
 .header {
-    @include flex;
-    padding: 1rem 1.5rem;
+    @include flex(row, center, center);
     @include header-shadow;
     position: relative;
-    z-index: 1;
+    padding: 1.25rem;
 
-    .header__arrow--link {
+    .header__icon {
         position: absolute;
-        top: 1.5rem;
-        left: 1.5rem;
-        color: #515151;
+        top: 1.8rem;
+        left: 1.25rem;
         font-size: 1.2rem;
+    }
+
+    @include laptop {
+        padding: 1.25, 2.5rem;
+
+        .header__icon {
+            left: 2.5rem;
+        }
     }
 }

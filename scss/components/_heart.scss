@@ -1,4 +1,32 @@
-.restaurant__like {
-    @include heart;
-}
+.heart__like {
+    @include flex (row, center, center);
+    position: relative;
+    left: 0;
+    margin: 0 0.5rem;
 
+    @include laptop {
+        left: 0;
+        margin-left: 2rem;
+    }
+
+    .heart__like--empty {
+        position: absolute;
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+
+    .heart__like--fill {
+        position: absolute;
+        font-size: 1.3rem;
+        color: transparent;
+        @include gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+
+        &:hover {
+            opacity: 1;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}

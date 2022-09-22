@@ -58,11 +58,11 @@
 
             &:hover {
                 background-color: #F5EDFF;
-                transition: backgroun-color 0.2s linear;
+                transition: background-color 0.3s ease-in-out;
 
                 .howItWorks__icon {
                     color: $primary-color;
-                    transition: color 0.2s linear;
+                    transition: color 0.3s linear;
                 }
             }
 
