@@ -1,23 +1,23 @@
-.location {
-    @include flex;
-    padding: 1rem 1.5rem;
-    background-color: $bg-color;
-    gap: 1rem;
+// .location {
+//     @include flex;
+//     padding: 1rem 1.5rem;
+//     background-color: $bg-color;
+//     gap: 1rem;
 
-    &__icon {
-        color: #353535;
-    }
-    &__input {
-        background-color: transparent;
-        border: none;
-        outline: none;
-        width: 8rem;
-    }
+//     &__icon {
+//         color: #353535;
+//     }
+//     &__input {
+//         background-color: transparent;
+//         border: none;
+//         outline: none;
+//         width: 8rem;
+//     }
 
-    ::placeholder {
-        font-weight: 600;
-        color: #4B4B4B;
-        font-size: 1rem;
-        font-family: 'Roboto', sans-serif;
-    }
-}
+//     ::placeholder {
+//         font-weight: 600;
+//         color: #4B4B4B;
+//         font-size: 1rem;
+//         font-family: 'Roboto', sans-serif;
+//     }
+// }
