@@ -67,9 +67,6 @@
     max-height: 4.3rem;
     width: 100%;
 
-    // @include laptop {
-    //     max-width: 18rem;
-    // }
 
     &:hover {
         .submenu__animation {
@@ -90,11 +87,6 @@
     text-overflow: ellipsis;
 }
 
-@mixin border {
-    border: 1px solid salmon;
-}
-
-
 // MIXIN RESPONSIVE
 @mixin tablet {
     @media screen and (min-width:map-get($breakpoints, tablet)) {
@@ -113,12 +105,6 @@
         @content;
     }
 }
-
-
-// @mixin border {
-//     border: 1px solid #252525;
-// }
-
 
 
 @mixin appear-animation {
